@@ -9,6 +9,7 @@ public class Main {
 
 
         movie1.review(2);
+        movie1.review(3);
         movie1.getAverage();
 
 
