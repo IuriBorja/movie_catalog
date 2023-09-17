@@ -8,6 +8,11 @@ public class Series extends Title{
     private int minByEpi;
 
 
+    @Override
+    public int getLastsInMin() {
+        return seasons * epiBySeasons * minByEpi;
+    }
+
     public int getSeasons() {
         return seasons;
     }
