@@ -1,8 +1,8 @@
-
+package movie_catalog.models;
 
 public class Movie {
 
-    String name;
+    private String name;
     int releaseYear;
     boolean isIncludedOnPlan;
     double sumOfAvaliation;
@@ -11,7 +11,7 @@ public class Movie {
 
 
 
-    void showDatasheet() {
+    public void showDatasheet() {
         System.out.println("Name of the movie: " + name);
         System.out.println("Release year: " + releaseYear);
         System.out.println("Last in minutes: " + lastsInMin);
@@ -19,14 +19,21 @@ public class Movie {
     }
 
 
-    void review(double score) {
+    public void review(double score) {
         sumOfAvaliation += score;
         totalAvaliation++;
     }
 
-    double getAverage() {
+    public double getAverage() {
         return sumOfAvaliation / totalAvaliation;
     }
 
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
