@@ -7,6 +7,11 @@ public class Main {
         movie1.name = "Interestellar";
         movie1.showDatasheet();
 
+
+        movie1.review(2);
+        movie1.getAverage();
+
+
     }
 
 }
