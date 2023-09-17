@@ -3,16 +3,21 @@ import movie_catalog.models.Movie;
 public class Main {
     public static void main(String[] args) {
 
-        Movie movie1 = new Movie();
-        movie1.setName("Interestellar");
-        System.out.println(movie1.getName());
-        movie1.showDatasheet();
+        Movie favorite = new Movie();
 
 
-        movie1.review(2);
-        movie1.review(3);
-        movie1.getAverage();
+        favorite.setName("Interestellar");
+        favorite.setReleaseYear(2014);
+        favorite.setLastsInMin(160);
+        favorite.setIncludedOnPlan(true);
 
+        favorite.showDatasheet();
+        favorite.review(9);
+        favorite.review(8);
+        favorite.review(9);
+
+
+        System.out.println("Average of the validations about the movie: " + favorite.getAverage());
 
     }
 
