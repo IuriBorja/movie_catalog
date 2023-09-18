@@ -1,4 +1,6 @@
+import movie_catalog.calculations.FilterRecommendation;
 import movie_catalog.calculations.TimeCalculator;
+import movie_catalog.models.Episode;
 import movie_catalog.models.Movie;
 import movie_catalog.models.Series;
 
@@ -32,6 +34,21 @@ public class Main {
         calculator.include(series);
 
         System.out.println("Total time is: " + calculator.getTotalTime());
+        System.out.println("*****************************************");
+
+
+        Episode firstEpisode = new Episode();
+        firstEpisode.setNumber(1);
+        firstEpisode.setSeries(series);
+        firstEpisode.setTotalOfViews(300);
+
+        FilterRecommendation filter = new FilterRecommendation();
+        filter.filter(favorite);
+        filter.filter(another);
+        filter.filter(firstEpisode);
+
+
+
 
     }
 
