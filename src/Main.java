@@ -4,24 +4,21 @@ import movie_catalog.models.Episode;
 import movie_catalog.models.Movie;
 import movie_catalog.models.Series;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
-        Movie favorite = new Movie();
-        favorite.setName("Interstellar");
-        favorite.setReleaseYear(2014);
+        /*
+
         favorite.setLastsInMin(160); //
         favorite.setIncludedOnPlan(true);
 
-        Movie another = new Movie();
-        another.setName("John Wick");
-        another.setReleaseYear(2014);
+
         another.setLastsInMin(101); //
         another.setIncludedOnPlan(true);
 
-        Series series = new Series();
-        series.setName("La Casa De Papel");
-        series.setReleaseYear(2017);
+
         series.setIncludedOnPlan(true);
         series.setItsOn(true);
         series.setSeasons(5); //
@@ -49,6 +46,14 @@ public class Main {
 
 
 
+        System.out.println("Size of list: " + movies.size());
+        System.out.println("First movie: " + movies.get(0).getName());
+        System.out.println(movies);
+
+
+
+
+         */
 
     }
 

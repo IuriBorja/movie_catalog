@@ -1,6 +1,6 @@
 package movie_catalog.models;
 
-public class Title {
+public class Title implements Comparable<Title>{
 
     private String name;
     private int releaseYear;
@@ -9,6 +9,11 @@ public class Title {
     private int totalAvaliation;
     private int lastsInMin;
 
+
+    public Title(String name, int releaseYear) {
+        this.name = name;
+        this.releaseYear = releaseYear;
+    }
 
     /* exibe ficha tecnica */
     public void showDatasheet() {
@@ -71,5 +76,8 @@ public class Title {
     }
 
 
-
+    @Override
+    public int compareTo(Title anotherTitle) {
+        return this.getName().compareTo(anotherTitle.getName());
+    }
 }

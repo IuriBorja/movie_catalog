@@ -8,6 +8,12 @@ public class Series extends Title{
     private int minByEpi;
 
 
+
+    public Series(String name, int releaseYear) {
+        super(name, releaseYear);
+    }
+
+
     @Override
     public int getLastsInMin() {
         return seasons * epiBySeasons * minByEpi;
@@ -44,4 +50,9 @@ public class Series extends Title{
     public void setMinByEpi(int minByEpi) {
         this.minByEpi = minByEpi;
     }
+
+    public String toString() {
+        return "Serie: " + this.getName() + " (" + this.getReleaseYear() + ") ";
+    }
+
 }

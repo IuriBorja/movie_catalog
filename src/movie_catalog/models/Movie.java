@@ -6,6 +6,10 @@ public class Movie extends Title implements Classification {
 
     private String director;
 
+    public Movie(String name, int releaseYear) {
+        super(name, releaseYear);
+    }
+
     public String getDirector() {
         return director;
     }
@@ -18,4 +22,9 @@ public class Movie extends Title implements Classification {
     public int getClassification() {
         return (int) (getAverage() / 2);
     }
+
+    public String toString() {
+        return "Movie: " + this.getName() + " (" + this.getReleaseYear() + ") ";
+    }
+
 }
