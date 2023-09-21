@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Top Gun",
+    "ReleaseYear": 1986,
+    "IsIncludedOnPlan": false,
+    "SumOfAvaliation": 0.0,
+    "TotalAvaliation": 0,
+    "LastsInMin": 10
+  },
+  {
+    "Name": "Titanic",
+    "ReleaseYear": 1997,
+    "IsIncludedOnPlan": false,
+    "SumOfAvaliation": 0.0,
+    "TotalAvaliation": 0,
+    "LastsInMin": 19
+  }
+]
