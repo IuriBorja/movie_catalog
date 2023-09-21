@@ -1,6 +1,10 @@
 package movie_catalog.models;
 
+import com.google.gson.annotations.SerializedName;
+import movie_catalog.exception.YearConversionErrorException;
+
 public class Title implements Comparable<Title>{
+
 
     private String name;
     private int releaseYear;
@@ -13,6 +17,17 @@ public class Title implements Comparable<Title>{
     public Title(String name, int releaseYear) {
         this.name = name;
         this.releaseYear = releaseYear;
+    }
+
+    public Title(TitleOmdb myTitleOmdb) {
+        this.name = myTitleOmdb.title();
+
+            if (myTitleOmdb.year().length() > 4) {
+                throw new YearConversionErrorException("I could not convert the year because it has more than 04 characters");
+            }
+
+        this.releaseYear = Integer.parseInt(myTitleOmdb.year());
+        this.lastsInMin = Integer.parseInt(myTitleOmdb.runtime().substring(0, 2));
     }
 
     /* exibe ficha tecnica */
@@ -79,5 +94,15 @@ public class Title implements Comparable<Title>{
     @Override
     public int compareTo(Title anotherTitle) {
         return this.getName().compareTo(anotherTitle.getName());
+    }
+
+
+    @Override
+    public String toString() {
+        return "Title{" +
+                "name = " + name +
+                ", releaseYear = " + releaseYear +
+                ", lastsInMin = " + lastsInMin + " min" +
+                '}';
     }
 }
